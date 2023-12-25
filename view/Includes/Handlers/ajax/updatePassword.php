@@ -21,9 +21,9 @@
     $newPassword1 = $_POST['newPassword1'];
     $newPassword2 = $_POST['newPassword2'];
 
-    $oldMD5 = md5($oldPassword);
+    
 
-    $passwordCheckQuery = mysqli_query($con, "SELECT * FROM users where username='$username' AND password='$oldMD5'");
+    $passwordCheckQuery = mysqli_query($con, "SELECT * FROM users where username='$username' AND password='$oldPassword'");
     if(mysqli_num_rows($passwordCheckQuery) == 0) {
         echo "Password is incorrect";
         exit();
@@ -44,9 +44,6 @@
         exit();
     }
 
-
-    $newMD5 = md5($newPassword1);
-
-    $query = mysqli_query($con, "UPDATE users SET password='$newMD5' WHERE username='$username'");
+    $query = mysqli_query($con, "UPDATE users SET password='$newPassword1' WHERE username='$username'");
     echo "Password updated successfully!";
 ?>

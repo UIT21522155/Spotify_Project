@@ -1,19 +1,10 @@
 <?php
-<<<<<<< HEAD:view/Includes/header.php
     include("Includes/config.php");
     include("Includes/model/User.php");
     include("Includes/model/Artist.php");
     include("Includes/model/Album.php");
     include("Includes/model/Song.php");
     include("Includes/model/Playlist.php");
-=======
-    include("../controller/config.php");
-    include("../controller/model/User.php");
-    include("../controller/model/Artist.php");
-    include("../controller/model/Album.php");
-    include("../controller/model/Song.php");
-    include("../controller/model/Playlist.php");
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/header.php
 
     // LOGOUT
     // session_destroy();
@@ -42,11 +33,7 @@
 <body>
     <div id="mainContainer">
         <div id="topContainer">
-<<<<<<< HEAD:view/Includes/header.php
             <?php include("Includes/navBarContainer.php"); ?>
-=======
-            <?php include("../controller/navBarContainer.php"); ?>
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/header.php
 
             <div id="mainViewContainer">
                 <div id="mainContent">

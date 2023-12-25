@@ -1,4 +1,4 @@
 "# Spotify_Project"
-Database: Spotify
+Database: spotify-project
 
 Used languages: html, css, js, php
