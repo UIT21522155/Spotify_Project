@@ -37,16 +37,16 @@ CREATE TABLE `albums` (
 --
 
 INSERT INTO `albums` (`id`, `title`, `artist`, `genre`, `artworkPath`) VALUES
-(1, 'Album_1', 2, 4, 'item/images/album_img/90s Throwback.jpg'),
-(2, 'Album_2', 5, 10, 'item/images/album_img/Chill Vibes.jpg'),
-(3, 'Album_3', 3, 1, 'item/images/album_img/Country Roads.jpg'),
-(4, 'Album_4', 2, 9, 'item/images/album_img/EDM Party.jpg'),
-(5, 'Album_5', 1, 3, 'item/images/album_img/Indie Jams.jpg'),
-(6, 'Album_6', 6, 6, 'item/images/album_img/Latin Fiesta.jpg'),
-(7, 'Album_7', 7, 2, 'item/images/album_img/Pop Hits.jpg'),
-(8, 'Album_8', 8, 5, 'item/images/album_img/R&B Grooves.jpg'),
-(9, 'Album_9', 9, 2, 'item/images/album_img/Rock Classics.jpg'),
-(10, 'Album_10', 10, 1, 'item/images/album_img/Truc Nhan.jpg');
+(1, 'Album_1', 2, 4, '../item/images/album_img/90s Throwback.jpg'),
+(2, 'Album_2', 5, 10, '../item/images/album_img/Chill Vibes.jpg'),
+(3, 'Album_3', 3, 1, '../item/images/album_img/Country Roads.jpg'),
+(4, 'Album_4', 2, 9, '../item/images/album_img/EDM Party.jpg'),
+(5, 'Album_5', 1, 3, '../item/images/album_img/Indie Jams.jpg'),
+(6, 'Album_6', 6, 6, '../item/images/album_img/Latin Fiesta.jpg'),
+(7, 'Album_7', 7, 2, '../item/images/album_img/Pop Hits.jpg'),
+(8, 'Album_8', 8, 5, '../item/images/album_img/R&B Grooves.jpg'),
+(9, 'Album_9', 9, 2, '../item/images/album_img/Rock Classics.jpg'),
+(10, 'Album_10', 10, 1, '../item/images/album_img/Truc Nhan.jpg');
 
 
 -- --------------------------------------------------------
@@ -154,9 +154,7 @@ CREATE TABLE `playlistssongs` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `songs`
---
-
+-- Table 
 CREATE TABLE `songs` (
   `id` int(11) NOT NULL,
   `title` varchar(250) NOT NULL,
@@ -165,6 +163,7 @@ CREATE TABLE `songs` (
   `genre` int(11) NOT NULL,
   `duration` varchar(8) NOT NULL,
   `path` varchar(500) NOT NULL,
+
   `albumOrder` int(11) NOT NULL,
   `plays` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -218,26 +217,78 @@ CREATE TABLE `songs` (
 -- (35, 'Firework', '03:53', 'ITEMS/LIST_SONG/Firework.mp3', 'ITEMS/images/Firework.jpg', '2023-12-09 14:50:00', 35);
 
 -- --------------------------------------------------------
-INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path`, `albumOrder`, `plays`) VALUES
-(1, 'Take Me to Your Heart', 1, 5, 3, '4:36', '../item/music/Take Me to Your Heart.mp3', 1, 5),
+INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path` ,`albumOrder`, `plays`) VALUES
+
+
 (2, 'My Heart Will Go On', 2, 1, 4, '4:35', '../item/music/My Heart Will Go On.mp3', 1, 15),
-(3, 'Let Her Go', 3, 3, 1, '4:20', '../item/music/Let Her Go.mp3', 1, 8),
-(4, 'See You Again', 4, 9, 2, '3:49', '../item/music/See You Again.mp3', 1, 9),
-(5, 'Hello', 5, 2, 2, '4:56', '../item/music/Hello.mp3', 1, 1),
-(6, 'Someone Like You', 6, 6, 5, '4:49', '../item/music/Someone Like You.mp3', 1, 2),
-(7, 'Bohemian Rhapsody', 7, 7, 1, '6:41', '../item/music/Bohemian Rhapsody.mp3', 1, 3),
-(8, 'Shape of You', 8, 8, 2, '4:23', '../item/music/Shape of You.mp3', 1, 7),
-(9, 'Despacito', 9, 4, 2, '4:41', '../item/music/Despacito.mp3', 1, 5),
-(10, 'I Will Always Love You', 10, 2, 5, '4:30', '../item/music/I Will Always Love You.mp3', 2, 12),
-(11, 'Uptown Funk', 11, 10, 3, '4:30', '../item/music/Uptown Funk.mp3', 1, 1),
-(12, 'Dance Monkey', 12, 9, 9, '3:56', '../item/music/Dance Monkey.mp3', 2, 25),
-(13, 'Billie Jean', 13, 8, 1, '4:52', '../item/music/Billie Jean.mp3', 2, 20),
-(14, 'Wrecking Ball', 14, 7, 5, '3:41', '../item/music/Wrecking Ball.mp3', 2, 3),
-(15, 'Havana', 15, 6, 6, '3:32', '../item/music/Havana.mp3', 2, 2),
-(16, 'Wonderwall', 16, 5, 2, '4:18', '../item/music/Wonderwall.mp3', 2, 7),
 (17, 'All of Me', 17, 1, 5, '4:29', '../item/music/All of Me.mp3', 2, 1),
+(30, 'Eye of the Tiger',30,1,3, '04:02', '../item/music/Eye of the Tiger.mp3', 3,20),
+
+(5, 'Hello', 5, 2, 2, '4:56', '../item/music/Hello.mp3', 1, 1),
+(10, 'I Will Always Love You', 10, 2, 5, '4:30', '../item/music/I Will Always Love You.mp3', 2, 12),
 (18, 'Happy', 18, 2, 3, '4:00', '../item/music/Happy.mp3', 3, 25),
-(19, 'Counting Stars', 19, 4, 2, '4:17', '../item/music/Counting Stars.mp3', 2, 13);
+
+
+
+
+
+(3, 'Let Her Go', 3, 3, 1, '4:20', '../item/music/Let Her Go.mp3', 1, 8),
+(20, 'Tie me down', 20,3,5,'03:39', '../item/music/Tie me down.mp3', 2,22),
+(21, 'Shallow',21,3,4, '03:35', '../item/music/Shallow.mp3', 3,16),
+
+
+(9, 'Despacito', 9, 4, 2, '4:41', '../item/music/Despacito.mp3', 1, 5), 
+(19, 'Counting Stars', 19, 4, 2, '4:17', '../item/music/Counting Stars.mp3', 2, 13),
+(31, 'Africa',31,4,3, '04:54', '../item/music/Africa.mp3', 4,20),
+
+
+(1, 'Take Me to Your Heart', 1, 5, 3, '4:36', '../item/music/Take Me to Your Heart.mp3', 1, 5),
+(16, 'Wonderwall', 16, 5, 2, '4:18', '../item/music/Wonderwall.mp3', 2, 7),
+(28, 'Bad Romance',28,5,5,'04:52', '../item/music/Bad Romance.mp3', 3,10),
+(29, 'Wannabe',29,5,3, '03:16', '../item/music/Wannabe.mp3', 4,15),
+
+
+(6, 'Someone Like You', 6, 6, 5, '4:49', '../item/music/Someone Like You.mp3', 1, 2),
+(15, 'Havana', 15, 6, 6, '3:32', '../item/music/Havana.mp3', 2, 2),
+(34, 'Sugar',34,6,3, '04:24', '../item/music/Sugar.mp3', 3,20),
+(35, 'Firework',35,6,4, '03:53', '../item/music/Firwork.mp3', 4,15),
+
+
+
+(7, 'Bohemian Rhapsody', 7, 7, 1, '6:41', '../item/music/Bohemian Rhapsody.mp3', 1, 3),
+(14, 'Wrecking Ball', 14, 7, 5, '3:41', '../item/music/Wrecking Ball.mp3', 2, 3),
+(32, 'Viva la Vida',32,7,7, '04:02', '../item/music/Viva la Vida.mp3',3,20 ),
+(33, 'Hotline Bling',33,7,2, '04:55', '../item/music/Hotline Bling.mp3', 4,20),
+
+
+(8, 'Shape of You', 8, 8, 2, '4:23', '../item/music/Shape of You.mp3', 1, 7),
+(13, 'Billie Jean', 13, 8, 1, '4:52', '../item/music/Billie Jean.mp3', 2, 20),
+(24, 'Waka Waka (This Time for Africa)',24,8,3, '03:21', '../item/music/Waka Waka (This Time for Africa).mp3', 3,25),
+(25, 'Eleanor Rigby',25,8,5 ,'05:23', '../item/music/Eleanor Rigby.mp3', 4,40),
+
+
+(4, 'See You Again', 4, 9, 2, '3:49', '../item/music/See You Again.mp3', 1, 9),
+(12, 'Dance Monkey', 12, 9, 9, '3:56', '../item/music/Dance Monkey.mp3', 2, 25),
+(26, 'Chandelier',26,9,8, '03:36', '../item/music/Chandelier.mp3',3 ,20),
+(27, 'Sorry', 27,9,3,'03:19', '../item/music/Sorry.mp3', 4,15),
+
+(11, 'Uptown Funk', 11, 10, 3, '4:30', '../item/music/Uptown Funk.mp3', 1, 1),
+(22, 'Rolling in the Deep',22,10,2 ,'03:53', '../item/music/Rolling in the Deep.mp3', 2, 10),
+(23, 'Radioactive',23,10,4, '03:05', '../item/music/Radioactive.mp3', 3,11);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 --
 -- Table structure for table `users` (SIGNUP) 
 --
@@ -256,11 +307,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `name`, `email`, `password`, `profilePic`) VALUES
-(1, 'MinhChau25', 'Chau', 'MinhChau@gmail.com', '123456789',  'item/images/profile_img/user.jpg'),
-(2, 'ThuyHang12', 'Hang', 'ThuyHang@gmail.com', '123456789', 'item/images/profile_img/user.jpg'),
-(3, 'LuongHuy25', 'Huy', 'LuongHuy@gmail.com', '123456789',  'item/images/profile_img/user.jpg'),
-(4, 'TrungHieu25', 'Hieu', 'TrungHieu@gmail.com', '123456789',  'item/images/profile_img/user.jpg'),
-(5,'Default','Guest','user@gmail.com','123456789' ,'item/images/profile_img/user.jpg');
+(1, 'MinhChau25', 'Chau', 'MinhChau@gmail.com', '123456789',  '../item/images/profile_img/user.jpg'),
+(2, 'ThuyHang12', 'Hang', 'ThuyHang@gmail.com', '123456789', '../item/images/profile_img/user.jpg'),
+(3, 'LuongHuy25', 'Huy', 'LuongHuy@gmail.com', '123456789',  '../item/images/profile_img/user.jpg'),
+(4, 'TrungHieu25', 'Hieu', 'TrungHieu@gmail.com', '123456789',  '../item/images/profile_img/user.jpg'),
+(5,'Default','Guest','user@gmail.com','123456789','../item/images/profile_img/user.jpg');
 
 --
 
