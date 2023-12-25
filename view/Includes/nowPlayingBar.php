@@ -175,22 +175,14 @@
         pauseSong();
 
         // Get song from db using AJAX
-<<<<<<< HEAD:view/Includes/nowPlayingBar.php
         $.post("./Includes/Handlers/ajax/getSongJson.php", { songId: trackId }, function(data) {
-=======
-        $.post("../controller/Handlers/ajax/getSongJson.php", { songId: trackId }, function(data) {
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/nowPlayingBar.php
             // Parse returned string array into json
             var track = JSON.parse(data);
 
             $('.trackName span').text(track.title);
             
             // AJAX call to get artist
-<<<<<<< HEAD:view/Includes/nowPlayingBar.php
             $.post("./Includes/Handlers/ajax/getArtistJson.php", { artistId: track.artist }, function(data) {
-=======
-            $.post("../controller/Handlers/ajax/getArtistJson.php", { artistId: track.artist }, function(data) {
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/nowPlayingBar.php
                 var artist = JSON.parse(data);
                 $('.artistName span').text(artist.name);
                 // Set link on artist name
@@ -198,13 +190,10 @@
             });
 
             // AJAX call to get album
-<<<<<<< HEAD:view/Includes/nowPlayingBar.php
-            $.post(" #nowPlayingBar./Includes/Handlers/ajax/getAlbumJson.php", { albumId: track.album }, function(data) {
-=======
-            $.post("../controller/Handlers/ajax/getAlbumJson.php", { albumId: track.album }, function(data) {
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/nowPlayingBar.php
+            $.post("  ./Includes/Handlers/ajax/getAlbumJson.php", { albumId: track.album }, function(data) {
                 var album = JSON.parse(data);
-                $('.albumLink img').attr("src", album.artworkPath);
+                //album.artworkPath
+                $('.albumLink img').attr("src",album.artworkPath);
                 // Set link on album image
                 $('.albumLink img').attr("onclick", "openPage('album.php?id=" + album.id + "')");
                 // Set link on song name
@@ -225,11 +214,7 @@
         if(audioElement.audio.currentTime == 0) {
             // AJAX call to update song play count
 
-<<<<<<< HEAD:view/Includes/nowPlayingBar.php
             $.post("../Includes/Handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
-=======
-            $.post("../controller/Handlers/ajax/updatePlays.php", { songId: audioElement.currentlyPlaying.id });
->>>>>>> c0337f45db05e67d47bc4cf194dd167340d96b3b:controller/nowPlayingBar.php
         }
 
 

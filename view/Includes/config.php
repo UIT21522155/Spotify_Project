@@ -9,7 +9,7 @@
 
     // Create connection
     // URL, USER, PW, DB
-    $con = mysqli_connect("localhost", "root", "", "spotify");
+    $con = mysqli_connect("localhost", "root", "", "spotify-project");
 
     if(mysqli_connect_errno()) {
         echo "Failed to connect" . mysqli_connect_errno();

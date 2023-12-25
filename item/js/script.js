@@ -35,7 +35,7 @@ $(document).on("change", "select.playlist", function () {
   var songId = $(this).prev(".songId").val();
 
   $.post(
-    "../../Includes/Handlers/ajax/addToPlaylist.php",
+    "Includes/Handlers/ajax/addToPlaylist.php",
     { playlistId: playlistId, songId: songId },
     function (err) {
       if (err != "") {
@@ -51,7 +51,7 @@ $(document).on("change", "select.playlist", function () {
 });
 
 function logout() {
-  $.post("../../Includes/Handlers/ajax/logout.php", function () {
+  $.post("Includes/Handlers/ajax/logout.php", function () {
     // reload current page
     location.reload();
   });
@@ -61,7 +61,7 @@ function updateEmail(emailClass) {
   var email = $("." + emailClass).val();
 
   $.post(
-    "../../Includes/Handlers/ajax/updateEmail.php",
+    "Includes/Handlers/ajax/updateEmail.php",
     { email: email, username: userLoggedIn },
     function (response) {
       $("." + emailClass)
@@ -81,7 +81,7 @@ function updatePassword(
   var newPassword2 = $("." + newPasswordClass2).val();
 
   $.post(
-    "../../Includes/Handlers/ajax/updatePassword.php",
+    "Includes/Handlers/ajax/updatePassword.php",
     {
       oldPassword: oldPassword,
       newPassword1: newPassword1,
@@ -157,7 +157,7 @@ function removeFromPlaylist(button, playlistId) {
   var songId = $(button).prevAll(".songId").val();
 
   $.post(
-    "../../Includes/Handlers/ajax/removeFromPlaylist.php",
+    "Includes/Handlers/ajax/removeFromPlaylist.php",
     { playlistId: playlistId, songId: songId },
     function (err) {
       if (err != "") {
@@ -173,11 +173,9 @@ function removeFromPlaylist(button, playlistId) {
 
 function createPlaylist() {
   var playlistName = prompt("Please enter the name of your playlist");
-  console.log(1);
   if (playlistName != null) {
-    console.log(playlistName);
     $.post(
-      "../../Includes/Handlers/ajax/createPlaylist.php",
+      "Includes/Handlers/ajax/createPlaylist.php",
       { name: playlistName, username: userLoggedIn },
       function (err) {
         if (err != "") {
@@ -196,7 +194,7 @@ function deletePlaylist(playlistId) {
   var conf = confirm("Are you sure you want to delete this playlist?");
   if (conf) {
     $.post(
-      "../../Includes/Handlers/ajax/deletePlaylist.php",
+      "Includes/Handlers/ajax/deletePlaylist.php",
       { playlistId: playlistId },
       function (err) {
         if (err != "") {
@@ -215,7 +213,7 @@ function deleteUser(userId) {
   var conf = confirm("Are you sure you want to delete this user?");
   if (conf) {
     $.post(
-      "../../Includes/Handlers/ajax/deleteUser.php",
+      "Includes/Handlers/ajax/deleteUser.php",
       { userId: userId },
       function (err) {
         if (err != "") {
@@ -234,7 +232,7 @@ function deleteSong(songId) {
   var conf = confirm("Are you sure you want to delete this song?");
   if (conf) {
     $.post(
-      "../../Includes/Handlers/ajax/deleteSong.php",
+      "Includes/Handlers/ajax/deleteSong.php",
       { songId: songId },
       function (err) {
         if (err != "") {
