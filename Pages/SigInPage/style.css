@@ -29,21 +29,27 @@ section {
 }
 
 section div.main{
-    margin: 32px 0;
+    margin: 16px 0;
     padding: 32px;
-    width: 734px;
-    height: 910px;
-    background: #000;
-    border-radius: 5px;
+    width: 1600px;
+    height: 1080px;
 
+    flex-wrap: wrap;
 }
+
 
 section div.main h1{
     text-align: center;
-    margin: 48px 0;
+    margin: 10px 0;
     color: white;
     font-size: 48px;
+}
 
+section div.main h2{
+    text-align: center;
+    margin: 25px 0;
+    color: white;
+    font-size: 40px;
 }
  /* format cho hình ảnh của gg, fb, apple */
 section div.main .account-connect{
@@ -93,22 +99,33 @@ section div.main hr {
 
 /* Vừng đăng nhập tài khoản, mật khẩu */
 
-section div.main .log-in{
+section div.main .login-form{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     font-weight: bold;
-
+    background: black;
+    border-radius: 10px;
 }
-section div.main .log-in form label{
+
+section div.main .signin-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+    flex-direction: column;
+    background: black;
+    border-radius: 10px;
+}
+section div.main form label{
     color: white;
     font-size: 14px;
     margin-bottom: 8px;
     display:  inline-block;
-
+    flex-wrap: wrap;
 }
 
-section div.main .log-in form input{
+section div.main form input{
     display: block;
     padding: 14px;
     width: 324px;
@@ -124,6 +141,12 @@ section div.main .log-in form input{
     color: white;
 }
 
+form.login-form {
+    background: #000;
+
+}
+
+form.sig
 .switch {
     margin: 0px;
     padding: 0px;
@@ -188,7 +211,7 @@ input#switch{
     bottom: 11px;
 }
 
-section div.main .log-in button{
+section div.main button{
     background-color: #1ed760;
     border-radius: 30px;
     font-weight: bold;
@@ -200,7 +223,7 @@ section div.main .log-in button{
     margin: 20px 0s;
 }
  /* fontmat lại vị trí của Forgot password */
-section div.main .log-in a{
+section div.main .login-form a{
     display: block;
     text-align: center;
     color: white;

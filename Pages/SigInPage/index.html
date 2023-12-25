@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spotify Log in</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" content="width=device-width, initial-scale=1" href="style.css">
+    <!-- Bootstrap5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
     <!-- Logo spotify -->
@@ -17,20 +20,10 @@
     </header>
 
     <section>
-<!-- chèn hình ảnh đăng nhập từ gg, fb, aple -->
-        <div class="main">
-            <h1>Log in to Spotify</h1>
-            <div class="account-connect">
-                <!-- <button class = "a-c-btn" id="g"><img src="img/google.png"><span>Continue with Google</span></button>
-                <button class = "a-c-btn" id="f"><img src="img/facebook.png"><span>Continue with Facebook</span></button>
-                <button class = "a-c-btn" id="a"><img src="img/apple.png"><span>Continue with Apple</span></button>
 
-             -->
-            </div>
-
-            <hr>
-            <!-- Tạo vùng nhập Tài khoản, mật khẩu -->
-            <div class="log-in">
+        <!-- <div class="container d-flex flex-row align-content-center">
+            <div class="row">
+              <div class="col-lg-6 ">
                 <form>
 
                     <label>Email or username</label>
@@ -50,18 +43,79 @@
                     <a href="#">Forgot your password?</a>
                     
                 </form>
+              </div>
+              <div class="col-lg-6 "></div>
             </div>
+          </div> -->
+          
+<!-- chèn hình ảnh đăng nhập từ gg, fb, aple -->
+        <div class="main">
+            <div class="row">
+            <h1>Welcome To Spotify</h1>
+            <!-- <div class="account-connect">
+                <button class = "a-c-btn" id="g"><img src="img/google.png"><span>Continue with Google</span></button>
+                <button class = "a-c-btn" id="f"><img src="img/facebook.png"><span>Continue with Facebook</span></button>
+                <button class = "a-c-btn" id="a"><img src="img/apple.png"><span>Continue with Apple</span></button>
+            </div>
+            <hr> -->
+            <!-- Tạo vùng nhập Tài khoản, mật khẩu -->
+            <div class="login-form col-6">
+                <form class="login">
+                    <h2>Login</h2>
+                    <label>Email or username</label>
+                    <input type="text" placeholder="Email or username">
 
+                    <label>Password</label>
+                    <input type="text" placeholder="Password">
+                    
+                    <div class="switch">
+                        <input type="checkbox" id="switch" checked>
+                        <label for="switch"></label>
+                        <span>Remember me</span>
+                    </div>
+
+                    <button>Log In</button>
+                    <a href="#">Forgot your password?</a>
+                    <hr>    
+                    <button>Continue As Guest</button>
+
+                    
+                </form>
+            </div>
+            <div class="signin-form col-6">
+                <form class="signin">
+                    <h2>Sign In</h2>
+                    <label>Email</label>
+                    <input type="text" placeholder="Email">
+
+                    <label>Password</label>
+                    <input type="text" placeholder="Password">
+
+                    <label>Phone number</label>
+                    <input type="text" placeholder="Phone number">
+                    
+                    <label>First name</label>
+                    <input type="text" placeholder="First name">
+                    
+                    <label>Last name</label>
+                    <input type="text" placeholder="Last name">
+
+                    <label>Birthday</label>
+                    <input type="text" placeholder="Birthday">
+
+                    <button>Sign In</button>
+                </form>
+            </div>
             <hr>
 
-            <div class="last">
+            <!-- <div class="last">
                 <span>Don't you have an account?</span>
                 <a href="#">Sign up for Spotify</a>
-            </div>
+            </div> -->
 
 
 
-
+        </div>
         </div>
 
     </section>
