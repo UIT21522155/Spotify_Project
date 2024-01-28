@@ -14,29 +14,7 @@ var shuffle = false;
 var userLoggedIn;
 // Timer used in search
 var timer;
-
 /******************** GLOBAL VARIABLES END *****************************/
-const {
-  initializeApp,
-} = require("https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js");
-const {
-  getStorage,
-  ref,
-  getDownloadURL,
-} = require("https://www.gstatic.com/firebasejs/10.7.2/firebase-storage.js");
-const firebaseConfig = {
-  apiKey: "AIzaSyAxNzp6ZIoPmA531pPMGMrixCIc-Eti7Sg",
-  authDomain: "project-1d15c.firebaseapp.com",
-  projectId: "project-1d15c",
-  storageBucket: "project-1d15c.appspot.com",
-  messagingSenderId: "582758612889",
-  appId: "1:582758612889:web:db739c8e80553846da5d08",
-  measurementId: "G-5E5YGT17WD",
-};
-
-//Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
 
 // Hides optionsMenu on scroll event
 $(window).scroll(hideOptionsMenu);
@@ -308,16 +286,7 @@ function Audio() {
 
   this.setTrack = function (track) {
     this.currentlyPlaying = track;
-    console.log(1);
-    getDownloadURL(ref(storage, "Audio/" + track.title + ".mp3"))
-      .then((url) => {
-        this.audio.src = url;
-        console.log(url);
-      })
-      .catch((error) => {
-        // Handle any errors
-        console.log(error);
-      });
+    this.audio.src = track.path;
   };
 
   this.play = function () {

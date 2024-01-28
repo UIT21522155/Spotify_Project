@@ -171,110 +171,66 @@ CREATE TABLE `songs` (
 --
 -- --------------------------------------------------------
 
---
--- --------------------------------------------------------
--- --------------------------------------------------------
-
---
--- Dumping data for table `songs`
---
-
--- INSERT INTO `songs` (`id`, `title`, `duration`, `filePath`, `imgPath`, `dateAdded`, `singerID`) VALUES
--- (1, 'Take Me to Your Heart', '04:36', 'ITEMS/LIST_SONG/Take Me to Your Heart.mp3', 'ITEMS/images/Take Me to Your Heart.jpg', '2023-12-09 12:00:00', 1),
--- (2, 'My Heart Will Go On', '04:35', 'ITEMS/LIST_SONG/My Heart Will Go On.mp3', 'ITEMS/images/My Heart Will Go On.jpg', '2023-12-09 12:05:00', 2),
--- (3, 'Let Her Go', '04:20', 'ITEMS/LIST_SONG/Let Her Go.mp3', 'ITEMS/images/Let Her Go.jpg', '2023-12-09 12:10:00', 3),
--- (4, 'See You Again', '03:49', 'ITEMS/LIST_SONG/See You Again.mp3', 'ITEMS/images/See You Again.jpg', '2023-12-09 12:15:00', 4),
--- (5, 'Hello', '04:56', 'ITEMS/LIST_SONG/Hello.mp3', 'ITEMS/images/Hello.jpg', '2023-12-09 12:20:00', 5),
--- (6, 'Someone Like You', '04:49', 'ITEMS/LIST_SONG/Someone Like You.mp3', 'ITEMS/images/someone_like_you.jpg', '2023-12-09 12:25:00', 6),
--- (7, 'Bohemian Rhapsody', '06:41', 'ITEMS/LIST_SONG/Bohemian Rhapsody.mp3', 'ITEMS/images/bohemian_rhapsody.jpg', '2023-12-09 12:30:00', 7),
--- (8, 'Shape of You', '04:23', 'ITEMS/LIST_SONG/Shape of You.mp3', 'ITEMS/images/shape_of_you.jpg', '2023-12-09 12:35:00', 8),
--- (9, 'Despacito', '04:41', 'ITEMS/LIST_SONG/Despacito.mp3', 'ITEMS/images/Despacito.jpg', '2023-12-09 12:40:00', 9),
--- (10, 'I Will Always Love You', '04:30', 'ITEMS/LIST_SONG/I Will Always Love You.mp3', 'ITEMS/images/i_will_always_love_you.jpg', '2023-12-09 12:45:00', 10),
--- (11, 'Uptown Funk', '04:30', 'ITEMS/LIST_SONG/Uptown Funk.mp3', 'ITEMS/images/Uptown Funk.jpg', '2023-12-09 12:50:00', 11),
--- (12, 'Dance Monkey', '03:56', 'ITEMS/LIST_SONG/Dance Monkey.mp3', 'ITEMS/images/Dance Monkey.jpg', '2023-12-09 12:55:00', 12),
--- (13, 'Billie Jean', '04:52', 'ITEMS/LIST_SONG/Billie Jean.mp3', 'ITEMS/images/Billie Jean.jpg', '2023-12-09 13:00:00', 13),
--- (14, 'Wrecking Ball', '03:41', 'ITEMS/LIST_SONG/Wrecking Ball.mp3', 'ITEMS/images/Wrecking Ball.jpg', '2023-12-09 13:05:00', 14),
--- (15, 'Havana', '03:32', 'ITEMS/LIST_SONG/Havana.mp3', 'ITEMS/images/Havana.jpg', '2023-12-09 13:10:00', 15),
--- (16, 'Wonderwall', '04:18', 'ITEMS/LIST_SONG/Wonderwall.mp3', 'ITEMS/images/Wonderwall.jpg', '2023-12-09 13:15:00', 16),
--- (17, 'All of Me', '04:29', 'ITEMS/LIST_SONG/All of Me.mp3', 'ITEMS/images/All of Me.jpg', '2023-12-09 13:20:00', 17),
--- (18, 'Happy', '04:00', 'ITEMS/LIST_SONG/Happy.mp3', 'ITEMS/images/Happy.jpg', '2023-12-09 13:25:00', 18),
--- (19, 'Counting Stars', '04:17', 'ITEMS/LIST_SONG/Counting Stars.mp3', 'ITEMS/images/Counting Stars.jpg', '2023-12-09 13:30:00', 19),
--- (20, 'Tie me down', '03:39', 'ITEMS/LIST_SONG/Tie me down.mp3', 'ITEMS/images/Tie me down.jpg', '2023-12-09 13:35:00', 20),
--- (21, 'Shallow', '03:35', 'ITEMS/LIST_SONG/Shallow.mp3', 'ITEMS/images/Shallow.jpg', '2023-12-09 13:40:00', 21),
--- (22, 'Rolling in the Deep', '03:53', 'ITEMS/LIST_SONG/Rolling in the Deep.mp3', 'ITEMS/images/Rolling in the Deep.jpg', '2023-12-09 13:45:00', 22),
--- (23, 'Radioactive', '03:05', 'ITEMS/LIST_SONG/Radioactive.mp3', 'ITEMS/images/Radioactive.jpg', '2023-12-09 13:50:00', 23),
--- (24, 'Waka Waka (This Time for Africa)', '03:21', 'ITEMS/LIST_SONG/Waka Waka (This Time for Africa).mp3', 'ITEMS/images/Waka Waka (This Time for Africa).jpg', '2023-12-09 13:55:00', 24),
--- (25, 'Eleanor Rigby', '05:23', 'ITEMS/LIST_SONG/Eleanor Rigby.mp3', 'ITEMS/images/Eleanor Rigby.jpg', '2023-12-09 14:00:00', 25),
--- (26, 'Chandelier', '03:36', 'ITEMS/LIST_SONG/Chandelier.mp3', 'ITEMS/images/Chandelier.jpg', '2023-12-09 14:05:00', 26),
--- (27, 'Sorry', '03:19', 'ITEMS/LIST_SONG/Sorry.mp3', 'ITEMS/images/Sorry.jpg', '2023-12-09 14:10:00', 27),
--- (28, 'Bad Romance', '04:52', 'ITEMS/LIST_SONG/Bad Romance.mp3', 'ITEMS/images/Bad Romance.jpg', '2023-12-09 14:15:00', 28),
--- (29, 'Wannabe', '03:16', 'ITEMS/LIST_SONG/Wannabe.mp3', 'ITEMS/images/Wannabe.jpg', '2023-12-09 14:20:00', 29),
--- (30, 'Eye of the Tiger', '04:02', 'ITEMS/LIST_SONG/Eye of the Tiger.mp3', 'ITEMS/images/Eye of the Tiger.jpg', '2023-12-09 14:25:00', 30),
--- (31, 'Africa', '04:54', 'ITEMS/LIST_SONG/Africa.mp3', 'ITEMS/images/Africa.jpg', '2023-12-09 14:30:00', 31),
--- (32, 'Viva la Vida', '04:02', 'ITEMS/LIST_SONG/Viva la Vida.mp3', 'ITEMS/images/Viva la Vida.jpg', '2023-12-09 14:35:00', 32),
--- (33, 'Hotline Bling', '04:55', 'ITEMS/LIST_SONG/Hotline Bling.mp3', 'ITEMS/images/Hotline Bling.jpg', '2023-12-09 14:40:00', 33),
--- (34, 'Sugar', '04:24', 'ITEMS/LIST_SONG/Sugar.mp3', 'ITEMS/images/Sugar.jpg', '2023-12-09 14:45:00', 34),
--- (35, 'Firework', '03:53', 'ITEMS/LIST_SONG/Firework.mp3', 'ITEMS/images/Firework.jpg', '2023-12-09 14:50:00', 35);
 
 -- --------------------------------------------------------
 INSERT INTO `songs` (`id`, `title`, `artist`, `album`, `genre`, `duration`, `path` ,`albumOrder`, `plays`) VALUES
 
 
-(2, 'My Heart Will Go On', 2, 1, 4, '4:35', '../item/music/My Heart Will Go On.mp3', 1, 15),
-(17, 'All of Me', 17, 1, 5, '4:29', '../item/music/All of Me.mp3', 2, 1),
-(30, 'Eye of the Tiger',30,1,3, '04:02', '../item/music/Eye of the Tiger.mp3', 3,20),
+(2, 'My Heart Will Go On', 2, 1, 4, '4:35', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FMy%20Heart%20Will%20Go%20On.mp3?alt=media&token=5de83d04-f796-44d6-b94f-23a5ed02121e', 1, 15),
+(17, 'All of Me', 17, 1, 5, '4:29', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FAll%20of%20Me.mp3?alt=media&token=5de90c60-e555-4f8e-b55a-37b82c4ed12c', 2, 1),
+(30, 'Eye of the Tiger',30,1,3, '04:02', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FEye%20of%20the%20Tiger.mp3?alt=media&token=8323851f-5e74-4a9d-9455-e6acb599173a', 3,20),
 
-(5, 'Hello', 5, 2, 2, '4:56', '../item/music/Hello.mp3', 1, 1),
-(10, 'I Will Always Love You', 10, 2, 5, '4:30', '../item/music/I Will Always Love You.mp3', 2, 12),
-(18, 'Happy', 18, 2, 3, '4:00', '../item/music/Happy.mp3', 3, 25),
-
-
+(5, 'Hello', 5, 2, 2, '4:56', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FHello.mp3?alt=media&token=801c7590-dfcb-451d-8869-b7361d84a098', 1, 1),
+(10, 'I Will Always Love You', 10, 2, 5, '4:30', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FI%20Will%20Always%20Love%20You.mp3?alt=media&token=1e3b7909-15d4-4ce9-a64a-71532657b85d', 2, 12),
+(18, 'Happy', 18, 2, 3, '4:00', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FHappy.mp3?alt=media&token=a91c4dce-74ec-4cb0-8508-f56bb493e7d8', 3, 25),
 
 
 
-(3, 'Let Her Go', 3, 3, 1, '4:20', '../item/music/Let Her Go.mp3', 1, 8),
-(20, 'Tie me down', 20,3,5,'03:39', '../item/music/Tie me down.mp3', 2,22),
-(21, 'Shallow',21,3,4, '03:35', '../item/music/Shallow.mp3', 3,16),
 
 
-(9, 'Despacito', 9, 4, 2, '4:41', '../item/music/Despacito.mp3', 1, 5), 
-(19, 'Counting Stars', 19, 4, 2, '4:17', '../item/music/Counting Stars.mp3', 2, 13),
-(31, 'Africa',31,4,3, '04:54', '../item/music/Africa.mp3', 4,20),
+(3, 'Let Her Go', 3, 3, 1, '4:20', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FLet%20Her%20Go.mp3?alt=media&token=8e2fd4b9-1497-4071-9c8e-3ef76ec521d5', 1, 8),
+(20, 'Tie me down', 20,3,5,'03:39', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FTie%20me%20down.mp3?alt=media&token=8022ec02-11a0-43a8-9141-9968b66adb72', 2,22),
+(21, 'Shallow',21,3,4, '03:35', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FShallow.mp3?alt=media&token=7b6b0aca-9602-48ac-beae-e555c9f60df8', 3,16),
 
 
-(1, 'Take Me to Your Heart', 1, 5, 3, '4:36', '../item/music/Take Me to Your Heart.mp3', 1, 5),
-(16, 'Wonderwall', 16, 5, 2, '4:18', '../item/music/Wonderwall.mp3', 2, 7),
-(28, 'Bad Romance',28,5,5,'04:52', '../item/music/Bad Romance.mp3', 3,10),
-(29, 'Wannabe',29,5,3, '03:16', '../item/music/Wannabe.mp3', 4,15),
+(9, 'Despacito', 9, 4, 2, '4:41', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FDespacito.mp3?alt=media&token=8703efdb-8cfd-4775-89da-a6a3849ae2ba', 1, 5), 
+(19, 'Counting Stars', 19, 4, 2, '4:17', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FCounting%20Stars.mp3?alt=media&token=a6621cd0-3dc9-4b3c-9bfa-1f73aaf492d3', 2, 13),
+(31, 'Africa',31,4,3, '04:54', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FAfrica.mp3?alt=media&token=5b2a3c9a-dfcf-4495-a371-09c260e2ec47', 4,20),
 
 
-(6, 'Someone Like You', 6, 6, 5, '4:49', '../item/music/Someone Like You.mp3', 1, 2),
-(15, 'Havana', 15, 6, 6, '3:32', '../item/music/Havana.mp3', 2, 2),
-(34, 'Sugar',34,6,3, '04:24', '../item/music/Sugar.mp3', 3,20),
-(35, 'Firework',35,6,4, '03:53', '../item/music/Firwork.mp3', 4,15),
+(1, 'Take Me to Your Heart', 1, 5, 3, '4:36', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FAfrica.mp3?alt=media&token=5b2a3c9a-dfcf-4495-a371-09c260e2ec47', 1, 5),
+(16, 'Wonderwall', 16, 5, 2, '4:18', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FWonderwall.mp3?alt=media&token=91adb493-061a-4fc0-921b-26fd0c9d4356', 2, 7),
+(28, 'Bad Romance',28,5,5,'04:52', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FBad%20Romance.mp3?alt=media&token=6329a942-36e5-4c3f-9188-b3bf70ff1a55', 3,10),
+(29, 'Wannabe',29,5,3, '03:16', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FWannabe.mp3?alt=media&token=f9c9c438-7c73-40c1-80cc-8d63ae3ac4ed', 4,15),
+
+
+(6, 'Someone Like You', 6, 6, 5, '4:49', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FSomeone%20Like%20You.mp3?alt=media&token=4ef63011-7dec-4e4d-b9c1-caaf8b06a03c', 1, 2),
+(15, 'Havana', 15, 6, 6, '3:32', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FHavana.mp3?alt=media&token=beeb7329-7598-459a-b7c6-eb30b2195e48', 2, 2),
+(34, 'Sugar',34,6,3, '04:24', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FSugar.mp3?alt=media&token=98cd15e2-a479-434c-a449-1c24d5f8f381', 3,20),
+(35, 'Firework',35,6,4, '03:53', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FFirework.mp3?alt=media&token=f7ab0682-aa1c-41b9-9c47-3d1b948d683e', 4,15),
 
 
 
-(7, 'Bohemian Rhapsody', 7, 7, 1, '6:41', '../item/music/Bohemian Rhapsody.mp3', 1, 3),
-(14, 'Wrecking Ball', 14, 7, 5, '3:41', '../item/music/Wrecking Ball.mp3', 2, 3),
-(32, 'Viva la Vida',32,7,7, '04:02', '../item/music/Viva la Vida.mp3',3,20 ),
-(33, 'Hotline Bling',33,7,2, '04:55', '../item/music/Hotline Bling.mp3', 4,20),
+(7, 'Bohemian Rhapsody', 7, 7, 1, '6:41', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FBohemian%20Rhapsody.mp3?alt=media&token=d4537620-5531-4945-a982-659aa1ecf190', 1, 3),
+(14, 'Wrecking Ball', 14, 7, 5, '3:41', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FWrecking%20Ball.mp3?alt=media&token=b0e6a1ab-cdad-4fb7-bb4c-707e97c988e6', 2, 3),
+(32, 'Viva la Vida',32,7,7, '04:02', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FViva%20la%20Vida.mp3?alt=media&token=86e48b64-d041-4f00-8f41-d272bb8343f8',3,20 ),
+(33, 'Hotline Bling',33,7,2, '04:55', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FHotline%20Bling.mp3?alt=media&token=cbc46021-2a3f-41f4-a63c-87acd40482c8', 4,20),
 
 
-(8, 'Shape of You', 8, 8, 2, '4:23', '../item/music/Shape of You.mp3', 1, 7),
-(13, 'Billie Jean', 13, 8, 1, '4:52', '../item/music/Billie Jean.mp3', 2, 20),
-(24, 'Waka Waka (This Time for Africa)',24,8,3, '03:21', '../item/music/Waka Waka (This Time for Africa).mp3', 3,25),
-(25, 'Eleanor Rigby',25,8,5 ,'05:23', '../item/music/Eleanor Rigby.mp3', 4,40),
+(8, 'Shape of You', 8, 8, 2, '4:23', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FShape%20of%20You.mp3?alt=media&token=1f97b8c8-0bbf-4f26-8acc-207702d4937f', 1, 7),
+(13, 'Billie Jean', 13, 8, 1, '4:52', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FBillie%20Jean.mp3?alt=media&token=a292aac5-192f-4b22-9032-ee694c738af0', 2, 20),
+(24, 'Waka Waka (This Time for Africa)',24,8,3, '03:21', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FWaka%20Waka%20(This%20Time%20for%20Africa).mp3?alt=media&token=91566edf-46a9-45a4-a383-12015b54e9c8', 3,25),
+(25, 'Eleanor Rigby',25,8,5 ,'05:23', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FEleanor%20Rigby.mp3?alt=media&token=33241c40-ff18-417b-b0af-9dc745ca1815', 4,40),
 
 
-(4, 'See You Again', 4, 9, 2, '3:49', '../item/music/See You Again.mp3', 1, 9),
-(12, 'Dance Monkey', 12, 9, 9, '3:56', '../item/music/Dance Monkey.mp3', 2, 25),
-(26, 'Chandelier',26,9,8, '03:36', '../item/music/Chandelier.mp3',3 ,20),
-(27, 'Sorry', 27,9,3,'03:19', '../item/music/Sorry.mp3', 4,15),
+(4, 'See You Again', 4, 9, 2, '3:49', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FSee%20You%20Again.mp3?alt=media&token=0b65ce95-f507-4275-a3c7-8a5ca2da0fcf', 1, 9),
+(12, 'Dance Monkey', 12, 9, 9, '3:56', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FDance%20Monkey.mp3?alt=media&token=2e60deda-119c-4f3d-8591-7eb93ddbe28a', 2, 25),
+(26, 'Chandelier',26,9,8, '03:36', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FChandelier.mp3?alt=media&token=e3b7c466-3bfe-499f-bfc8-9ca10305a240',3 ,20),
+(27, 'Sorry', 27,9,3,'03:19', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FSorry.mp3?alt=media&token=e0479c9c-4d9d-4dc4-a89b-1077b919609a', 4,15),
 
-(11, 'Uptown Funk', 11, 10, 3, '4:30', '../item/music/Uptown Funk.mp3', 1, 1),
-(22, 'Rolling in the Deep',22,10,2 ,'03:53', '../item/music/Rolling in the Deep.mp3', 2, 10),
-(23, 'Radioactive',23,10,4, '03:05', '../item/music/Radioactive.mp3', 3,11);
+(11, 'Uptown Funk', 11, 10, 3, '4:30', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FUptown%20Funk.mp3?alt=media&token=ee12f6d8-2511-4293-acda-dd1ed0cedb14', 1, 1),
+(22, 'Rolling in the Deep',22,10,2 ,'03:53', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FRolling%20in%20the%20Deep.mp3?alt=media&token=d2bc04bc-d590-486b-87d7-6b15f3754ed5', 2, 10),
+(23, 'Radioactive',23,10,4, '03:05', 'https://firebasestorage.googleapis.com/v0/b/project-1d15c.appspot.com/o/Audio%2FRadioactive.mp3?alt=media&token=247a5472-20ca-47b6-8097-03f8c182cf3e', 3,11);
 
 
 

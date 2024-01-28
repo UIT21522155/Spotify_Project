@@ -28,13 +28,12 @@
     <link rel="stylesheet" type="text/css" href="../item/css/perfect-scrollbar.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../item/css/style.css" />
     <script type="text/javascript" src="../item/js/jquery-3.3.1.min.js" ></script>
-    
-    <script src ="../item/js/firebase.js" type = "module"></script>
-    <script src="../item/js/script.js" ></script>
+     <script src="../item/js/script.js"></script>    
+   
 
 </script>
 </head>
-<body>
+<body>  
     <div id="mainContainer">
         <div id="topContainer">
             <?php include("Includes/navBarContainer.php"); ?>
