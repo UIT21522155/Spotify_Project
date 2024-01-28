@@ -10,11 +10,16 @@
     $jsonArray = json_encode($resultArray);
 ?>
 
-<script>
+
+<script >
+    
+
     $(document).ready(function() {
         var newPlaylist = <?php echo $jsonArray; ?>;
         audioElement = new Audio();
         // Dont play when page reloads
+        console.log(audioElement);
+        
         setTrack(newPlaylist[0], newPlaylist, false);
         // Set volume progress bar initially
         updateVolumeProgressBar(audioElement.audio);
@@ -229,6 +234,7 @@
         $('.controlButton.pause').hide();
         audioElement.pause();
     }
+    
 </script>
 
 <div id="nowPlayingBarContainer">

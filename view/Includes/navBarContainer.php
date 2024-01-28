@@ -1,8 +1,8 @@
 <div id="navBarContainer">
-    <nav class="navBar">
-        <span onclick="openPage('index.php');" class="logo">
-            <img src="../item/images/other_img/logo.png" alt="Logo">
-        </span>
+    <nav class="navBar ">
+        <div onclick="openPage('index.php');" class="logo">
+            <img  src="../item/images/other_img/logo.png" alt="Logo">
+        </div>
 
         <div class="group">
             <div class="navItem" id="navItemSearch">
